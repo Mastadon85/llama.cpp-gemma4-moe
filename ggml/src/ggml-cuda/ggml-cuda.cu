@@ -83,7 +83,9 @@
 #include <string>
 #include <vector>
 #include <unordered_set>
-
+#ifndef ggml_cuda_uma_prefetch_enabled
+static bool ggml_cuda_uma_prefetch_enabled();
+#endif
 static_assert(sizeof(half) == sizeof(ggml_fp16_t), "wrong fp16 size");
 
 [[noreturn]]
@@ -2443,18 +2445,25 @@ static void ggml_cuda_mul_mat_id(ggml_backend_cuda_context & ctx, ggml_tensor * 
 
     // Prefetch the first active expert's weights before the loop starts
 #if !defined(GGML_USE_MUSA)
-    if (uma_expert_prefetch) {
-        for (int64_t first = 0; first < ne02; ++first) {
-            if (tokens_per_expert[first] > 0) {
-                const char * first_data = (const char *) src0->data + first * nb02;
-                const size_t slice_bytes = (size_t) nb02;
-                if (slice_bytes >= 4096) {
-                    cudaMemPrefetchAsync(first_data, slice_bytes, ggml_cuda_get_device(), stream);
+        if (uma_expert_prefetch) {
+            for (int64_t first = 0; first < ne02; ++first) {
+                if (tokens_per_expert[first] > 0) {
+                    const char * first_data = (const char *) src0->data + first * nb02;
+                    const size_t slice_bytes = (size_t) nb02;
+                    if (slice_bytes >= 4096) {
+#if defined(CUDART_VERSION) && CUDART_VERSION >= 13000
+                        cudaMemLocation loc;
+                        loc.type = cudaMemLocationTypeDevice;
+                        loc.id = ggml_cuda_get_device();
+                        cudaMemPrefetchAsync(first_data, slice_bytes, loc, 0, stream);
+#else
+                        cudaMemPrefetchAsync(first_data, slice_bytes, ggml_cuda_get_device(), stream);
+#endif
+                    }
+                    break;
                 }
-                break;
             }
         }
-    }
 #endif
 
     char * src1_data_cur = (char *) src1_sorted.ptr;
@@ -2475,7 +2484,14 @@ static void ggml_cuda_mul_mat_id(ggml_backend_cuda_context & ctx, ggml_tensor * 
                     const char * next_data = (const char *) src0->data + next * nb02;
                     const size_t slice_bytes = (size_t) nb02;
                     if (slice_bytes >= 4096) {
+#if defined(CUDART_VERSION) && CUDART_VERSION >= 13000
+                        cudaMemLocation loc;
+                        loc.type = cudaMemLocationTypeDevice;
+                        loc.id = ggml_cuda_get_device();
+                        cudaMemPrefetchAsync(next_data, slice_bytes, loc, 0, stream);
+#else
                         cudaMemPrefetchAsync(next_data, slice_bytes, ggml_cuda_get_device(), stream);
+#endif
                     }
                     break;
                 }
@@ -3678,7 +3694,14 @@ static void ggml_cuda_graph_evaluate_and_capture(ggml_backend_cuda_context * cud
             return;
         }
 #if !defined(GGML_USE_MUSA)
+#if defined(CUDART_VERSION) && CUDART_VERSION >= 13000
+        cudaMemLocation loc;
+        loc.type = cudaMemLocationTypeDevice;
+        loc.id = device;
+        cudaMemPrefetchAsync(weights->data, nbytes, loc, 0, cuda_ctx->stream());
+#else
         cudaMemPrefetchAsync(weights->data, nbytes, device, cuda_ctx->stream());
+#endif
 #endif
     };
 

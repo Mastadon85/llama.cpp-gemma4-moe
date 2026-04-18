@@ -10,6 +10,7 @@
 
 #include <cinttypes>
 #include <cmath>
+#include <cstdio>
 #include <cstring>
 #include <limits>
 
@@ -432,6 +433,8 @@ void llama_context::sched_reserve() {
     sched_need_reserve = false;
 
     LLAMA_LOG_INFO("%s: reserving ...\n", __func__);
+    fprintf(stderr, "sched_reserve: begin\n");
+    fflush(stderr);
 
     synchronize();
 
@@ -465,10 +468,14 @@ void llama_context::sched_reserve() {
 
     // resolve automatic Flash Attention use
     if (cparams.auto_fa) {
+        fprintf(stderr, "sched_reserve: auto_fa probe begin\n");
+        fflush(stderr);
         auto * gf = graph_reserve(1, n_seqs, n_outputs, mctx.get(), true);
         if (!gf) {
             throw std::runtime_error("failed to reserve graph for Flash Attention check");
         }
+        fprintf(stderr, "sched_reserve: auto_fa probe graph_reserve complete\n");
+        fflush(stderr);
 
         const size_t prefix_len = strlen(LLAMA_TENSOR_NAME_FATTN) + 1;
         bool fa_device_mismatch = false;
@@ -502,13 +509,19 @@ void llama_context::sched_reserve() {
         }
 
         cparams.auto_fa = false;
+        fprintf(stderr, "sched_reserve: auto_fa probe end, flash_attn=%d\n", cparams.flash_attn);
+        fflush(stderr);
     }
 
     if (cparams.fused_gdn_ar) {
+        fprintf(stderr, "sched_reserve: fused_gdn probe begin\n");
+        fflush(stderr);
         auto * gf = graph_reserve(1, n_seqs, n_outputs, mctx.get(), true);
         if (!gf) {
             throw std::runtime_error("failed to reserve graph for fused Gated Delta Net check");
         }
+        fprintf(stderr, "sched_reserve: fused_gdn probe graph_reserve complete\n");
+        fflush(stderr);
 
         const size_t prefix_len = strlen(LLAMA_TENSOR_NAME_FGDNAR) + 1;
         bool gdn_device_mismatch = false;
@@ -535,6 +548,8 @@ void llama_context::sched_reserve() {
             cparams.fused_gdn_ar = false;
             LLAMA_LOG_WARN("%s: fused Gated Delta Net not supported, set to disabled\n", __func__);
         }
+        fprintf(stderr, "sched_reserve: fused_gdn probe end, fused_gdn_ar=%d\n", cparams.fused_gdn_ar);
+        fflush(stderr);
     }
 
     // reserve worst-case graph
@@ -546,6 +561,8 @@ void llama_context::sched_reserve() {
 
     // reserve pp (prompt processing) graph first so that buffers are only allocated once
     {
+        fprintf(stderr, "sched_reserve: pp reserve begin n_tokens=%u n_seqs=%u\n", n_tokens, n_seqs);
+        fflush(stderr);
         auto * gf = graph_reserve(n_tokens, n_seqs, n_tokens, mctx.get(),
                 model.hparams.no_alloc, model.hparams.no_alloc ? backend_buf_exp_size.data() : nullptr);
         if (!gf) {
@@ -559,6 +576,8 @@ void llama_context::sched_reserve() {
                 throw std::runtime_error("failed to allocate compute pp buffers");
             }
         }
+        fprintf(stderr, "sched_reserve: pp reserve complete\n");
+        fflush(stderr);
 
         n_splits_pp = ggml_backend_sched_get_n_splits(sched.get());
         n_nodes_pp  = ggml_graph_n_nodes(gf);
@@ -566,10 +585,14 @@ void llama_context::sched_reserve() {
 
     // reserve with tg (token generation) graph to get the number of splits and nodes
     {
+        fprintf(stderr, "sched_reserve: tg reserve begin n_seqs=%u\n", n_seqs);
+        fflush(stderr);
         auto * gf = graph_reserve(n_seqs, n_seqs, n_seqs, mctx.get(), model.hparams.no_alloc);
         if (!gf) {
             throw std::runtime_error("failed to allocate compute tg buffers");
         }
+        fprintf(stderr, "sched_reserve: tg reserve complete\n");
+        fflush(stderr);
 
         n_splits_tg = ggml_backend_sched_get_n_splits(sched.get());
         n_nodes_tg  = ggml_graph_n_nodes(gf);
@@ -577,6 +600,8 @@ void llama_context::sched_reserve() {
 
     // reserve again with pp graph to avoid ggml-alloc reallocations during inference
     {
+        fprintf(stderr, "sched_reserve: final pp reserve begin\n");
+        fflush(stderr);
         // TODO: not sure if the following graph would be worster case for multi-stream KV caches:
         //
         // auto * gf = graph_reserve(n_tokens, 1, n_tokens, mctx.get());
@@ -585,6 +610,8 @@ void llama_context::sched_reserve() {
         if (!gf) {
             throw std::runtime_error("failed to allocate compute pp buffers");
         }
+        fprintf(stderr, "sched_reserve: final pp reserve complete\n");
+        fflush(stderr);
     }
 
     for (size_t i = 0; i < backend_ptrs.size(); ++i) {
@@ -616,6 +643,8 @@ void llama_context::sched_reserve() {
 
     LLAMA_LOG_INFO("%s: reserve took %.2f ms, sched copies = %d\n",
             __func__, (t_end_us - t_start_us)/1000.0, ggml_backend_sched_get_n_copies(sched.get()));
+    fprintf(stderr, "sched_reserve: end\n");
+    fflush(stderr);
 }
 
 void llama_context::synchronize() {
@@ -2108,6 +2137,9 @@ llm_graph_result * llama_context::get_gf_res_reserve() const {
 ggml_cgraph * llama_context::graph_reserve(
         uint32_t n_tokens, uint32_t n_seqs, uint32_t n_outputs, const llama_memory_context_i * mctx, bool split_only, size_t * sizes) {
     LLAMA_LOG_DEBUG("%s: reserving a graph for ubatch with n_tokens = %4u, n_seqs = %2u, n_outputs = %4u\n", __func__, n_tokens, n_seqs, n_outputs);
+    fprintf(stderr, "graph_reserve: begin n_tokens=%u n_seqs=%u n_outputs=%u split_only=%d\n",
+            n_tokens, n_seqs, n_outputs, split_only);
+    fflush(stderr);
     GGML_ASSERT(n_outputs >= 1);
 
     if (n_tokens % n_seqs != 0) {
@@ -2145,24 +2177,37 @@ ggml_cgraph * llama_context::graph_reserve(
     const auto gparams = graph_params(res, ubatch, mctx, LLM_GRAPH_TYPE_DEFAULT);
 
     res->reset();
+    fprintf(stderr, "graph_reserve: building graph\n");
+    fflush(stderr);
 
     auto * gf = model.build_graph(gparams);
+    fprintf(stderr, "graph_reserve: model.build_graph complete\n");
+    fflush(stderr);
 
     this->n_outputs = save_n_outputs;
 
     // initialize scheduler with the specified graph
     if (split_only) {
+        fprintf(stderr, "graph_reserve: scheduler split/reserve_size begin\n");
+        fflush(stderr);
         if (sizes) {
             ggml_backend_sched_reserve_size(sched.get(), gf, sizes);
         } else {
             ggml_backend_sched_split_graph(sched.get(), gf);
         }
+        fprintf(stderr, "graph_reserve: scheduler split/reserve_size complete\n");
+        fflush(stderr);
     } else if (!ggml_backend_sched_reserve(sched.get(), gf)) {
         GGML_ASSERT(!sizes);
         LLAMA_LOG_ERROR("%s: failed to allocate compute buffers\n", __func__);
         return nullptr;
+    } else {
+        fprintf(stderr, "graph_reserve: scheduler reserve complete\n");
+        fflush(stderr);
     }
 
+    fprintf(stderr, "graph_reserve: end\n");
+    fflush(stderr);
     return gf;
 }
 

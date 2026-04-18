@@ -19,6 +19,7 @@
 #include <algorithm>
 #include <cassert>
 #include <cfloat>
+#include <cstdio>
 #include <cstdint>
 #include <cstring>
 #include <cmath>
@@ -1246,6 +1247,48 @@ void llama_model::load_hparams(llama_model_loader & ml) {
                 hparams.f_attention_scale = type == LLM_TYPE_27B
                     ? 1.0f / std::sqrt(float(hparams.n_embd / hparams.n_head(0)))
                     : 1.0f / std::sqrt(float(hparams.n_embd_head_k));
+            } break;
+        case LLM_ARCH_GEMMA4:
+            {
+                const bool found_swa = ml.get_key(LLM_KV_ATTENTION_SLIDING_WINDOW, hparams.n_swa, false);
+                if (found_swa && hparams.n_swa > 0) {
+                    hparams.swa_type = LLAMA_SWA_TYPE_STANDARD;
+                    uint32_t swa_period = 6;
+                    ml.get_key_or_arr(LLM_KV_ATTENTION_SLIDING_WINDOW_PATTERN, swa_period, false);
+                    hparams.set_swa_pattern(swa_period);
+
+                    ml.get_key(LLM_KV_ROPE_FREQ_BASE_SWA, hparams.rope_freq_base_train_swa, false);
+                } else {
+                    hparams.swa_type = LLAMA_SWA_TYPE_NONE;
+                }
+
+                hparams.f_final_logit_softcapping = 0.0f;
+                ml.get_key(LLM_KV_FINAL_LOGIT_SOFTCAPPING, hparams.f_final_logit_softcapping, false);
+                ml.get_key(LLM_KV_ATTENTION_LAYERNORM_RMS_EPS, hparams.f_norm_rms_eps);
+                ml.get_key(LLM_KV_EXPERT_FEED_FORWARD_LENGTH, hparams.n_ff_exp,      false);
+                ml.get_key(LLM_KV_EXPERT_COUNT,               hparams.n_expert,      false);
+                ml.get_key(LLM_KV_EXPERT_USED_COUNT,          hparams.n_expert_used, false);
+                hparams.n_layer_vision = 27;
+                ml.get_key(LLM_KV_VISION_BLOCK_COUNT,         hparams.n_layer_vision, false);
+
+                uint32_t n_embd_head_k_swa = hparams.n_embd_head_k;
+                uint32_t n_embd_head_v_swa = hparams.n_embd_head_v;
+                ml.get_key(LLM_KV_ATTENTION_KEY_LENGTH_SWA,   n_embd_head_k_swa, false);
+                ml.get_key(LLM_KV_ATTENTION_VALUE_LENGTH_SWA, n_embd_head_v_swa, false);
+
+                for (uint32_t i = 0; i < hparams.n_layer; ++i) {
+                    if (hparams.is_swa(i)) {
+                        hparams.n_embd_head_k_arr[i] = n_embd_head_k_swa;
+                        hparams.n_embd_head_v_arr[i] = n_embd_head_v_swa;
+                    } else {
+                        hparams.n_embd_head_k_arr[i] = hparams.n_embd_head_k;
+                        hparams.n_embd_head_v_arr[i] = hparams.n_embd_head_v;
+                    }
+                }
+
+                ml.get_key_or_arr(LLM_KV_ATTENTION_HEAD_COUNT_KV, hparams.n_head_kv_arr, hparams.n_layer, false);
+
+                hparams.f_attention_scale = 1.0f / std::sqrt(float(hparams.n_embd_head_k_arr[0]));
             } break;
         case LLM_ARCH_GEMMA3N:
             {
@@ -4102,7 +4145,7 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
                         layer.wk = create_tensor(tn(LLM_TENSOR_ATTN_K,   "weight", i), {n_embd, n_embd_k_gqa}, 0);
                         layer.wv = create_tensor(tn(LLM_TENSOR_ATTN_V,   "weight", i), {n_embd, n_embd_v_gqa}, 0);
                         layer.wo = create_tensor(tn(LLM_TENSOR_ATTN_OUT, "weight", i), {n_embd_head_k * n_head, n_embd}, 0);
-                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, 0);
+                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
 
                         layer.ffn_norm = create_tensor(tn(LLM_TENSOR_FFN_NORM, "weight", i), {n_embd}, 0);
                         layer.ffn_gate = create_tensor(tn(LLM_TENSOR_FFN_GATE, "weight", i), {n_embd,   n_ff}, 0);
@@ -4140,7 +4183,7 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
                         layer.wv = create_tensor(tn(LLM_TENSOR_ATTN_V,   "weight", i), {n_embd, n_embd_v_gqa}, 0);
                         layer.wo = create_tensor(tn(LLM_TENSOR_ATTN_OUT, "weight", i), {n_embd_head_k * n_head, n_embd}, 0);
 
-                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, 0);
+                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
                         layer.attn_k_norm    = create_tensor(tn(LLM_TENSOR_ATTN_K_NORM,    "weight", i), {n_embd_head_k}, 0);
                         layer.attn_q_norm    = create_tensor(tn(LLM_TENSOR_ATTN_Q_NORM,    "weight", i), {n_embd_head_k}, 0);
 
@@ -4149,6 +4192,102 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
                         layer.ffn_up   = create_tensor(tn(LLM_TENSOR_FFN_UP,   "weight", i), {n_embd,   n_ff}, 0);
                         layer.ffn_down = create_tensor(tn(LLM_TENSOR_FFN_DOWN, "weight", i), {  n_ff, n_embd}, 0);
                         layer.ffn_post_norm = create_tensor(tn(LLM_TENSOR_FFN_POST_NORM, "weight", i), {n_embd}, 0);
+                    }
+                } break;
+            case LLM_ARCH_GEMMA4:
+                {
+                    tok_embd    = create_tensor(tn(LLM_TENSOR_TOKEN_EMBD,  "weight"), {n_embd, n_vocab}, 0);
+                    output_norm = create_tensor(tn(LLM_TENSOR_OUTPUT_NORM, "weight"), {n_embd}, 0);
+                    output      = create_tensor(tn(LLM_TENSOR_OUTPUT,      "weight"), {n_embd, n_vocab}, TENSOR_NOT_REQUIRED);
+
+                    if (output == NULL) {
+                        output = tok_embd;
+                    }
+
+                    create_tensor(tn(LLM_TENSOR_ROPE_FREQS, "weight"), {256}, TENSOR_NOT_REQUIRED);
+
+                    auto create_tensor_gemma4_debug = [&](const LLM_TN_IMPL & tensor_name, const std::initializer_list<int64_t> & ne, int flags) -> ggml_tensor * {
+                        const std::string tensor_name_str = tensor_name.str();
+                        const std::string shape_str = llama_format_tensor_shape(std::vector<int64_t>(ne));
+                        fprintf(stderr, "gemma4: create_tensor %s shape=[%s] flags=0x%x\n",
+                                tensor_name_str.c_str(), shape_str.c_str(), flags);
+                        fflush(stderr);
+                        ggml_tensor * tensor = create_tensor(tensor_name, ne, flags);
+                        fprintf(stderr, "gemma4: create_tensor %s -> %s\n",
+                                tensor_name_str.c_str(), tensor ? "ok" : "null");
+                        fflush(stderr);
+                        return tensor;
+                    };
+
+                    for (int i = 0; i < n_layer; ++i) {
+                        auto & layer = layers[i];
+
+                        layer.attn_norm = create_tensor(tn(LLM_TENSOR_ATTN_NORM, "weight", i), {n_embd}, 0);
+
+                        layer.wq = create_tensor(tn(LLM_TENSOR_ATTN_Q,   "weight", i), {n_embd, hparams.n_embd_head_k_arr[i] * n_head}, 0);
+                        layer.wk = create_tensor(tn(LLM_TENSOR_ATTN_K,   "weight", i), {n_embd, hparams.n_head_kv_arr[i] * hparams.n_embd_head_k_arr[i]}, 0);
+                        layer.wv = create_tensor(tn(LLM_TENSOR_ATTN_V,   "weight", i), {n_embd, hparams.n_head_kv_arr[i] * hparams.n_embd_head_v_arr[i]}, TENSOR_NOT_REQUIRED);
+                        layer.wo = create_tensor(tn(LLM_TENSOR_ATTN_OUT, "weight", i), {hparams.n_embd_head_v_arr[i] * n_head, n_embd}, 0);
+
+                        layer.attn_post_norm = create_tensor_gemma4_debug(tn(LLM_TENSOR_G4_POST_ATTN_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
+                        layer.attn_k_norm    = create_tensor(tn(LLM_TENSOR_ATTN_K_NORM,    "weight", i), {hparams.n_embd_head_k_arr[i]}, 0);
+                        layer.attn_q_norm    = create_tensor(tn(LLM_TENSOR_ATTN_Q_NORM,    "weight", i), {hparams.n_embd_head_k_arr[i]}, 0);
+
+                        layer.ffn_norm = create_tensor(tn(LLM_TENSOR_FFN_NORM, "weight", i), {n_embd}, 0);
+
+                        // Dense FFN
+                        layer.ffn_gate = create_tensor(tn(LLM_TENSOR_FFN_GATE, "weight", i), {n_embd,   n_ff}, 0);
+                        layer.ffn_up   = create_tensor(tn(LLM_TENSOR_FFN_UP,   "weight", i), {n_embd,   n_ff}, 0);
+                        layer.ffn_down = create_tensor(tn(LLM_TENSOR_FFN_DOWN, "weight", i), {  n_ff, n_embd}, 0);
+
+                        // MoE FFN
+                        if (hparams.n_ff_exp == 0) {
+                            throw std::runtime_error("gemma4 requires a non-zero expert feed-forward length");
+                        }
+                        const int64_t n_ff_exp = hparams.n_ff_exp;
+                        layer.ffn_gate_inp     = create_tensor(tn(LLM_TENSOR_FFN_GATE_INP, "weight", i), {n_embd, n_expert}, 0);
+                        layer.ffn_gate_up_exps = create_tensor(tn(LLM_TENSOR_FFN_GATE_UP_EXPS, "weight", i), {n_embd, n_ff_exp * 2, n_expert}, 0);
+                        layer.ffn_down_exps    = create_tensor(tn(LLM_TENSOR_FFN_DOWN_EXPS, "weight", i), {n_ff_exp, n_embd, n_expert}, 0);
+
+                        layer.ffn_post_norm  = create_tensor_gemma4_debug(tn(LLM_TENSOR_FFN_POST_NORM,      "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
+                        layer.ffn_norm_exps  = create_tensor_gemma4_debug(tn(LLM_TENSOR_G4_POST_FFW_NORM_1, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
+                        layer.layer_out_norm = create_tensor_gemma4_debug(tn(LLM_TENSOR_G4_POST_FFW_NORM_2, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
+                        layer.layer_out_norm_b = create_tensor_gemma4_debug(tn(LLM_TENSOR_G4_PRE_FFW_NORM_2, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
+                        create_tensor_gemma4_debug(tn(LLM_TENSOR_G4_FFN_DOWN_EXPS_SCALE, i),           {n_expert}, TENSOR_NOT_REQUIRED);
+                        create_tensor_gemma4_debug(tn(LLM_TENSOR_G4_FFN_GATE_INP_SCALE,  i),           {n_expert}, TENSOR_NOT_REQUIRED);
+                        layer.ffn_act        = create_tensor_gemma4_debug(tn(LLM_TENSOR_G4_LAYER_OUTPUT_SCALE, "weight", i), {1}, TENSOR_NOT_REQUIRED);
+
+                        if (i < int(hparams.n_layer_vision)) {
+                            const int64_t n_embd_v  = 1152;
+                            const int64_t n_ff_v    = 4304;
+
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_ATTN_Q,        "weight", i), {n_embd_v, n_embd_v}, TENSOR_NOT_REQUIRED);
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_ATTN_K,        "weight", i), {n_embd_v, n_embd_v}, TENSOR_NOT_REQUIRED);
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_ATTN_V,        "weight", i), {n_embd_v, n_embd_v}, TENSOR_NOT_REQUIRED);
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_ATTN_OUT,      "weight", i), {n_embd_v, n_embd_v}, TENSOR_NOT_REQUIRED);
+
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_ATTN_Q_NORM,   "weight", i), {72},               TENSOR_NOT_REQUIRED);
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_ATTN_K_NORM,   "weight", i), {72},               TENSOR_NOT_REQUIRED);
+
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_ATTN_NORM,     "weight", i), {n_embd_v},         TENSOR_NOT_REQUIRED);
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_ATTN_POST_NORM,"weight", i), {n_embd_v},         TENSOR_NOT_REQUIRED);
+
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_FFN_GATE,      "weight", i), {n_embd_v, n_ff_v}, TENSOR_NOT_REQUIRED);
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_FFN_UP,        "weight", i), {n_embd_v, n_ff_v}, TENSOR_NOT_REQUIRED);
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_FFN_DOWN,      "weight", i), {n_ff_v,   n_embd_v}, TENSOR_NOT_REQUIRED);
+
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_LN1,           "weight", i), {n_embd_v},         TENSOR_NOT_REQUIRED);
+                            create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_LN2,           "weight", i), {n_embd_v},         TENSOR_NOT_REQUIRED);
+                        }
+                    }
+
+                    if (hparams.n_layer_vision > 0) {
+                        const int64_t n_embd_v = 1152;
+                        create_tensor_gemma4_debug(tn(LLM_TENSOR_G4_MM_INPUT_PROJ, "weight"), {n_embd_v, n_embd},    TENSOR_NOT_REQUIRED);
+                        create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_PATCH_EMBD,   "weight"), {16, 16, 3, n_embd_v}, TENSOR_NOT_REQUIRED);
+                        create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_POS_EMBD,     "weight"), {n_embd_v, 10240, 2},  TENSOR_NOT_REQUIRED);
+                        create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_STD_BIAS),              {n_embd_v},             TENSOR_NOT_REQUIRED);
+                        create_tensor_gemma4_debug(tn(LLM_TENSOR_G4V_STD_SCALE),             {n_embd_v},             TENSOR_NOT_REQUIRED);
                     }
                 } break;
             case LLM_ARCH_GEMMA3N:
@@ -4185,7 +4324,7 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
 
                         layer.attn_q_norm    = create_tensor(tn(LLM_TENSOR_ATTN_Q_NORM,    "weight", i), {n_embd_head_k}, 0);
                         layer.attn_k_norm    = create_tensor(tn(LLM_TENSOR_ATTN_K_NORM,    "weight", i), {n_embd_head_k}, 0);
-                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, 0);
+                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
 
                         layer.ffn_norm = create_tensor(tn(LLM_TENSOR_FFN_NORM, "weight", i), {n_embd}, 0);
                         layer.ffn_gate = create_tensor(tn(LLM_TENSOR_FFN_GATE, "weight", i), {n_embd,   n_ff}, 0);
@@ -4639,7 +4778,7 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
                         layer.wo = create_tensor(tn(LLM_TENSOR_ATTN_OUT, "weight", i), {n_embd, n_embd}, 0);
                         layer.attn_q_norm = create_tensor(tn(LLM_TENSOR_ATTN_Q_NORM, "weight", i), {n_embd}, 0);
                         layer.attn_k_norm = create_tensor(tn(LLM_TENSOR_ATTN_K_NORM, "weight", i), {n_head_kv * n_embd_head}, 0);
-                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, 0);
+                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
 
                         layer.ffn_gate = create_tensor(tn(LLM_TENSOR_FFN_GATE, "weight", i), {n_embd,   n_ff}, 0);
                         layer.ffn_up   = create_tensor(tn(LLM_TENSOR_FFN_UP,   "weight", i), {n_embd,   n_ff}, 0);
@@ -4676,7 +4815,7 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
                         layer.bv = create_tensor(tn(LLM_TENSOR_ATTN_V,   "bias", i), {n_kv_dim},   TENSOR_NOT_REQUIRED);
 
                         layer.attn_norm = create_tensor(tn(LLM_TENSOR_ATTN_NORM, "weight", i), {n_embd}, 0);
-                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, 0);
+                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
 
                         layer.ffn_gate = create_tensor(tn(LLM_TENSOR_FFN_GATE, "weight", i), {n_embd,   n_ff}, 0);
                         layer.ffn_up   = create_tensor(tn(LLM_TENSOR_FFN_UP,   "weight", i), {n_embd,   n_ff}, 0);
@@ -5664,7 +5803,7 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
 
                         layer.rope_freqs = create_tensor(tn(LLM_TENSOR_ROPE_FREQS, "weight", i), {n_rot/2}, TENSOR_NOT_REQUIRED | (i != 0 ? TENSOR_DUPLICATED : 0));
 
-                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, 0);
+                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
                         layer.attn_q_norm = create_tensor(tn(LLM_TENSOR_ATTN_Q_NORM, "weight", i), {n_embd_head_k}, 0);
                         layer.attn_k_norm = create_tensor(tn(LLM_TENSOR_ATTN_K_NORM, "weight", i), {n_embd_head_k}, 0);
 
@@ -6351,7 +6490,7 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
 
                         // dual attention normalization
                         layer.attn_norm      = create_tensor(tn(LLM_TENSOR_ATTN_NORM,      "weight", i), {n_embd}, 0);
-                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, 0);
+                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
 
                         // attention projections
                         layer.wq = create_tensor(tn(LLM_TENSOR_ATTN_Q,   "weight", i), {n_embd, n_embd_head_k * n_head}, 0);
@@ -6640,7 +6779,7 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
                         auto & layer = layers[i];
 
                         layer.attn_norm      = create_tensor(tn(LLM_TENSOR_ATTN_NORM,      "weight", i), {n_embd}, 0);
-                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, 0);
+                        layer.attn_post_norm = create_tensor(tn(LLM_TENSOR_ATTN_POST_NORM, "weight", i), {n_embd}, TENSOR_NOT_REQUIRED);
 
                         layer.wq = create_tensor(tn(LLM_TENSOR_ATTN_Q,   "weight", i), {n_embd, n_head * n_rot}, 0);
                         layer.wk = create_tensor(tn(LLM_TENSOR_ATTN_K,   "weight", i), {n_embd, n_head_kv * n_rot}, 0);
@@ -7429,9 +7568,17 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
         }
     }
 
+    fprintf(stderr, "llama-model: done creating tensor handles, entering done_getting_tensors()\n");
+    fflush(stderr);
     ml.done_getting_tensors();
+    fprintf(stderr, "llama-model: done_getting_tensors() complete\n");
+    fflush(stderr);
 
+    fprintf(stderr, "llama-model: entering init_mappings()\n");
+    fflush(stderr);
     ml.init_mappings(true, use_mlock ? &pimpl->mlock_mmaps : nullptr);
+    fprintf(stderr, "llama-model: init_mappings() complete\n");
+    fflush(stderr);
     pimpl->mappings.reserve(ml.mappings.size());
 
     // create the backend buffers
@@ -7442,6 +7589,10 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
     const size_t n_max_backend_buffer = ml.ctx_map.size() * ml.files.size();
     pimpl->ctxs_bufs.reserve(n_max_backend_buffer);
 
+    fprintf(stderr, "llama-model: creating backend buffers for %zu contexts across %zu files\n",
+            ml.ctx_map.size(), ml.files.size());
+    fflush(stderr);
+
     for (auto & [buft, ctx_ptr] : ml.ctx_map) {
         ggml_context * ctx = ctx_ptr.get();
 
@@ -7449,6 +7600,9 @@ bool llama_model::load_tensors(llama_model_loader & ml) {
         if (ggml_get_first_tensor(ctx) == nullptr) {
             continue;
         }
+
+        fprintf(stderr, "llama-model: preparing buffer type %s\n", ggml_backend_buft_name(buft));
+        fflush(stderr);
 
         llama_buf_map buf_map;
         buf_map.reserve(n_max_backend_buffer);
@@ -8271,6 +8425,14 @@ ggml_cgraph * llama_model::build_graph(const llm_graph_params & params) const {
             {
                 llm = std::make_unique<llm_build_gemma3n_iswa>(*this, params);
             } break;
+        case LLM_ARCH_GEMMA4:
+            {
+                if (hparams.swa_type == LLAMA_SWA_TYPE_STANDARD) {
+                    llm = std::make_unique<llm_build_gemma4<true>>(*this, params);
+                } else {
+                    llm = std::make_unique<llm_build_gemma4<false>>(*this, params);
+                }
+            } break;
         case LLM_ARCH_GEMMA_EMBEDDING:
             {
                 llm = std::make_unique<llm_build_gemma_embedding>(*this, params);
@@ -8749,6 +8911,7 @@ llama_rope_type llama_model_rope_type(const llama_model * model) {
         case LLM_ARCH_ERNIE4_5:
         case LLM_ARCH_ERNIE4_5_MOE:
         case LLM_ARCH_MISTRAL3:
+        case LLM_ARCH_GEMMA4:
         case LLM_ARCH_LLAMA_EMBED:
         case LLM_ARCH_MAINCODER:
         case LLM_ARCH_GLM_DSA:

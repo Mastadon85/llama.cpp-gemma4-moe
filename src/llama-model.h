@@ -450,6 +450,21 @@ struct llama_layer {
     struct llama_layer_shortconv shortconv;
 
     struct llama_layer_nextn nextn;
+
+    // Gemma 4 vision
+    struct ggml_tensor * g4v_wq = nullptr;
+    struct ggml_tensor * g4v_wk = nullptr;
+    struct ggml_tensor * g4v_wv = nullptr;
+    struct ggml_tensor * g4v_wo = nullptr;
+    struct ggml_tensor * g4v_wq_norm = nullptr;
+    struct ggml_tensor * g4v_wk_norm = nullptr;
+    struct ggml_tensor * g4v_attn_norm = nullptr;
+    struct ggml_tensor * g4v_attn_post_norm = nullptr;
+    struct ggml_tensor * g4v_ffn_gate = nullptr;
+    struct ggml_tensor * g4v_ffn_up = nullptr;
+    struct ggml_tensor * g4v_ffn_down = nullptr;
+    struct ggml_tensor * g4v_ln1 = nullptr;
+    struct ggml_tensor * g4v_ln2 = nullptr;
 };
 
 struct llama_model {

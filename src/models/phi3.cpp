@@ -2,11 +2,6 @@
 
 template<bool iswa>
 llm_build_phi3<iswa>::llm_build_phi3(const llama_model & model, const llm_graph_params & params) : llm_graph_context(params) {
-    const int64_t n_embd_head = hparams.n_embd_head_v;
-    const int64_t n_embd_gqa = hparams.n_embd_v_gqa();
-
-    GGML_ASSERT(n_embd_head == hparams.n_embd_head_k);
-
     ggml_tensor * cur;
     ggml_tensor * inpL;
 
@@ -28,6 +23,9 @@ llm_build_phi3<iswa>::llm_build_phi3(const llama_model & model, const llm_graph_
     for (int il = 0; il < n_layer; ++il) {
         auto * residual = inpL;
 
+        const int64_t n_embd_head_k = hparams.n_embd_head_k_arr[il];
+        const int64_t n_embd_head_v = hparams.n_embd_head_v_arr[il];
+
         // self-attention
         {
             // rope freq factors for 128k context
@@ -47,18 +45,18 @@ llm_build_phi3<iswa>::llm_build_phi3(const llama_model & model, const llm_graph_
                 cur = build_lora_mm(model.layers[il].wqkv, attn_norm_output);
                 cb(cur, "wqkv", il);
 
-                Qcur = ggml_view_3d(ctx0, cur, n_embd_head, n_head,    n_tokens, n_embd_head * sizeof(float), cur->nb[1], 0 * sizeof(float) * (n_embd));
-                Kcur = ggml_view_3d(ctx0, cur, n_embd_head, n_head_kv, n_tokens, n_embd_head * sizeof(float), cur->nb[1], 1 * sizeof(float) * (n_embd));
-                Vcur = ggml_view_3d(ctx0, cur, n_embd_head, n_head_kv, n_tokens, n_embd_head * sizeof(float), cur->nb[1], 1 * sizeof(float) * (n_embd + n_embd_gqa));
+                Qcur = ggml_view_3d(ctx0, cur, n_embd_head_k, n_head,    n_tokens, n_embd_head_k * sizeof(float), cur->nb[1], 0 * sizeof(float) * (n_embd));
+                Kcur = ggml_view_3d(ctx0, cur, n_embd_head_k, n_head_kv, n_tokens, n_embd_head_k * sizeof(float), cur->nb[1], 1 * sizeof(float) * (n_embd));
+                Vcur = ggml_view_3d(ctx0, cur, n_embd_head_v, n_head_kv, n_tokens, n_embd_head_v * sizeof(float), cur->nb[1], 1 * sizeof(float) * (n_embd + hparams.n_embd_v_gqa()));
                 }
                 else {
                 Qcur = ggml_add(ctx0, build_lora_mm(model.layers[il].wq, attn_norm_output), model.layers[il].bq);
                 Kcur = ggml_add(ctx0, build_lora_mm(model.layers[il].wk, attn_norm_output), model.layers[il].bk);
                 Vcur = ggml_add(ctx0, build_lora_mm(model.layers[il].wv, attn_norm_output), model.layers[il].bv);
 
-                Qcur = ggml_reshape_3d(ctx0, Qcur, n_embd_head, n_head,    n_tokens);
-                Kcur = ggml_reshape_3d(ctx0, Kcur, n_embd_head, n_head_kv, n_tokens);
-                Vcur = ggml_reshape_3d(ctx0, Vcur, n_embd_head, n_head_kv, n_tokens);
+                Qcur = ggml_reshape_3d(ctx0, Qcur, n_embd_head_k, n_head,    n_tokens);
+                Kcur = ggml_reshape_3d(ctx0, Kcur, n_embd_head_k, n_head_kv, n_tokens);
+                Vcur = ggml_reshape_3d(ctx0, Vcur, n_embd_head_v, n_head_kv, n_tokens);
             }
             Qcur = ggml_rope_ext(
                     ctx0, Qcur, inp_pos, rope_factors,
@@ -76,7 +74,7 @@ llm_build_phi3<iswa>::llm_build_phi3(const llama_model & model, const llm_graph_
             cb(Kcur, "Kcur", il);
             cb(Vcur, "Vcur", il);
 
-            Qcur = ggml_scale(ctx0, Qcur, 1.0f / sqrtf(float(n_embd_head)));
+            Qcur = ggml_scale(ctx0, Qcur, 1.0f / sqrtf(float(n_embd_head_k)));
             cb(Qcur, "Qcur", il);
 
             cur = build_attn(inp_attn,
@@ -96,17 +94,22 @@ llm_build_phi3<iswa>::llm_build_phi3(const llama_model & model, const llm_graph_
         cb(cur, "ffn_norm", il);
 
         // feed-forward network
-        if (model.layers[il].ffn_gate_inp == nullptr) {
-            cur = build_ffn(cur,
+        ggml_tensor * ffn_out = nullptr;
+
+        // Dense FFN
+        if (model.layers[il].ffn_up != nullptr) {
+            ffn_out = build_ffn(cur,
                     model.layers[il].ffn_up,   NULL, NULL,
                     NULL,                      NULL, NULL,
                     model.layers[il].ffn_down, NULL, NULL,
                     NULL,
                     LLM_FFN_SWIGLU, LLM_FFN_SEQ, il);
-            cb(cur, "ffn_out", il);
-        } else {
-            // MoE branch
-            cur = build_moe_ffn(cur,
+            cb(ffn_out, "ffn_out", il);
+        }
+
+        // MoE FFN
+        if (model.layers[il].ffn_gate_inp != nullptr) {
+            ggml_tensor * moe_out = build_moe_ffn(cur,
                     model.layers[il].ffn_gate_inp,
                     model.layers[il].ffn_up_exps,
                     model.layers[il].ffn_gate_exps,
@@ -116,9 +119,18 @@ llm_build_phi3<iswa>::llm_build_phi3(const llama_model & model, const llm_graph_
                     LLM_FFN_SILU, true,
                     hparams.expert_weights_scale,
                     LLAMA_EXPERT_GATING_FUNC_TYPE_SOFTMAX,
-                    il);
-            cb(cur, "ffn_moe_out", il);
+                    il,
+                    nullptr,
+                    model.layers[il].ffn_gate_up_exps);
+            cb(moe_out, "ffn_moe_out", il);
+
+            if (ffn_out != nullptr) {
+                ffn_out = ggml_add(ctx0, ffn_out, moe_out);
+            } else {
+                ffn_out = moe_out;
+            }
         }
+        cur = ffn_out;
         cur = ggml_add(ctx0, residual, cur);
 
         cur = build_cvec(cur, il);

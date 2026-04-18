@@ -43,6 +43,7 @@ struct llama_hparams {
     uint32_t n_ctx_train; // context size the model was trained on
     uint32_t n_embd;
     uint32_t n_layer;
+    uint32_t n_layer_vision = 0;
     int32_t n_layer_kv_from_start = -1; // if non-negative, the first n_layer_kv_from_start layers have KV cache
     uint32_t n_rot;
     uint32_t n_embd_head_k; // dimension of keys (d_k). d_q is assumed to be the same, but there are n_head q heads, and only n_head_kv k-v heads
@@ -64,6 +65,8 @@ struct llama_hparams {
     std::array<uint32_t, LLAMA_MAX_LAYERS> n_head_arr;
     std::array<uint32_t, LLAMA_MAX_LAYERS> n_head_kv_arr;
     std::array<uint32_t, LLAMA_MAX_LAYERS> n_ff_arr;
+    std::array<uint32_t, LLAMA_MAX_LAYERS> n_embd_head_k_arr;
+    std::array<uint32_t, LLAMA_MAX_LAYERS> n_embd_head_v_arr;
 
     uint32_t n_layer_dense_lead = 0;
     uint32_t n_lora_q           = 0;

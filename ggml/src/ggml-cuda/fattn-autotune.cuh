@@ -9,6 +9,9 @@
 #include <mutex>
 #include <string>
 #include <sys/stat.h>
+#ifdef _WIN32
+#include <direct.h>
+#endif
 #include <unordered_map>
 
 // Online auto-tuning for flash attention kernel parameters.
@@ -142,6 +145,14 @@ struct fattn_autotune_state {
 
 static inline std::string fattn_profile_dir() {
     std::string dir;
+#ifdef _WIN32
+    const char * local = getenv("LOCALAPPDATA");
+    if (local && local[0]) {
+        dir = std::string(local) + "/llama.cpp/gpu_profiles";
+    } else {
+        return "";
+    }
+#else
     const char * cache = getenv("XDG_CACHE_HOME");
     if (cache && cache[0]) {
         dir = std::string(cache) + "/llama.cpp/gpu_profiles";
@@ -152,15 +163,20 @@ static inline std::string fattn_profile_dir() {
         }
         dir = std::string(home) + "/.cache/llama.cpp/gpu_profiles";
     }
+#endif
     return dir;
 }
 
 static inline void fattn_profile_mkdir_p(const std::string & path) {
     std::string partial;
     for (size_t i = 0; i < path.size(); i++) {
-        if (path[i] == '/' || i == path.size() - 1) {
+        if (path[i] == '/' || path[i] == '\\' || i == path.size() - 1) {
             partial = path.substr(0, i + 1);
+#ifdef _WIN32
+            _mkdir(partial.c_str());
+#else
             mkdir(partial.c_str(), 0755);
+#endif
         }
     }
 }

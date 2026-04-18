@@ -1,0 +1,2 @@
+gguf_ex_read_1: tensor[0], data[0]: found 0.000000, expected 100.000000
+C:\Users\Don\Documents\Projects\Attention_Matching\llama.cpp\examples\gguf\gguf.cpp:269: GGML_ASSERT(gguf_ex_read_1(fname, check_data) && "failed to read gguf file") failed
