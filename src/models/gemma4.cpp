@@ -74,10 +74,9 @@ llm_build_gemma4<iswa>::llm_build_gemma4(const llama_model & model, const llm_gr
             fflush(stderr);
 
             Qcur = build_norm(Qcur, model.layers[il].attn_q_norm, nullptr, LLM_NORM_RMS, il);
-            if (!use_k_eq_v) {
-                Kcur = build_norm(Kcur, model.layers[il].attn_k_norm, nullptr, LLM_NORM_RMS, il);
-                Vcur = ggml_rms_norm(ctx0, Vcur, hparams.f_norm_rms_eps);
-            }
+            Kcur = build_norm(Kcur, model.layers[il].attn_k_norm, nullptr, LLM_NORM_RMS, il);
+            Vcur = ggml_rms_norm(ctx0, Vcur, hparams.f_norm_rms_eps);
+
             cb(Qcur, "Qcur_normed", il);
             cb(Kcur, "Kcur_normed", il);
             cb(Vcur, "Vcur_normed", il);
@@ -86,13 +85,13 @@ llm_build_gemma4<iswa>::llm_build_gemma4(const llama_model & model, const llm_gr
 
             Qcur = ggml_rope_ext(
                     ctx0, Qcur, inp_pos, nullptr,
-                    n_rot, rope_type, n_ctx_orig, freq_base_l, freq_scale_l,
+                    n_embd_head_k, rope_type, n_ctx_orig, freq_base_l, freq_scale_l,
                     ext_factor, attn_factor, beta_fast, beta_slow);
 
             if (!use_k_eq_v) {
                 Kcur = ggml_rope_ext(
                         ctx0, Kcur, inp_pos, nullptr,
-                        n_rot, rope_type, n_ctx_orig, freq_base_l, freq_scale_l,
+                        n_embd_head_k, rope_type, n_ctx_orig, freq_base_l, freq_scale_l,
                         ext_factor, attn_factor, beta_fast, beta_slow);
             }
 
@@ -105,6 +104,7 @@ llm_build_gemma4<iswa>::llm_build_gemma4(const llama_model & model, const llm_gr
             cur = build_attn(inp_attn,
                     model.layers[il].wo, nullptr,
                     Qcur, Kcur, Vcur, nullptr, nullptr, nullptr, 1.0f, il);
+            ggml_mul_mat_set_prec(cur, GGML_PREC_F32);
             cb(cur, "attn_out", il);
             fprintf(stderr, "gemma4 graph: layer %d build_attn complete\n", il);
             fflush(stderr);
@@ -156,6 +156,14 @@ llm_build_gemma4<iswa>::llm_build_gemma4(const llama_model & model, const llm_gr
                 cb(moe_inp, "ffn_pre_norm_2", il);
             }
 
+            ggml_tensor * moe_logits = build_lora_mm(model.layers[il].ffn_gate_inp, moe_inp);
+            ggml_mul_mat_set_prec(moe_logits, GGML_PREC_F32);
+            if (hparams.f_router_logit_softcapping > 0.0f) {
+                moe_logits = ggml_scale(ctx0, moe_logits, 1.0f / hparams.f_router_logit_softcapping);
+                moe_logits = ggml_tanh(ctx0, moe_logits);
+                moe_logits = ggml_scale(ctx0, moe_logits, hparams.f_router_logit_softcapping);
+            }
+
             ggml_tensor * moe_out = build_moe_ffn(moe_inp,
                     model.layers[il].ffn_gate_inp,
                     nullptr,
@@ -167,7 +175,7 @@ llm_build_gemma4<iswa>::llm_build_gemma4(const llama_model & model, const llm_gr
                     hparams.expert_weights_scale,
                     LLAMA_EXPERT_GATING_FUNC_TYPE_SOFTMAX,
                     il,
-                    nullptr,
+                    moe_logits,
                     model.layers[il].ffn_gate_up_exps);
             cb(moe_out, "ffn_moe_out", il);
             fprintf(stderr, "gemma4 graph: layer %d moe ffn complete\n", il);
@@ -178,7 +186,7 @@ llm_build_gemma4<iswa>::llm_build_gemma4(const llama_model & model, const llm_gr
                 cb(moe_out, "ffn_post_norm_2", il);
             }
 
-            ffn_out = ggml_add(ctx0, dense_out, moe_out);
+            ffn_out = ggml_add(ctx0, ggml_cast(ctx0, dense_out, GGML_TYPE_F32), ggml_cast(ctx0, moe_out, GGML_TYPE_F32));
             cb(ffn_out, "ffn_merged", il);
         }
 
@@ -211,7 +219,7 @@ llm_build_gemma4<iswa>::llm_build_gemma4(const llama_model & model, const llm_gr
 
     cur = build_lora_mm(model.output, cur);
 
-    if (hparams.f_final_logit_softcapping) {
+    if (hparams.f_final_logit_softcapping > 0.0f) {
         cur = ggml_scale(ctx0, cur, 1.0f / hparams.f_final_logit_softcapping);
         cur = ggml_tanh(ctx0, cur);
         cur = ggml_scale(ctx0, cur, hparams.f_final_logit_softcapping);
