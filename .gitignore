@@ -1,0 +1,54 @@
+# === AI Models (Heavy Assets) ===
+# Ignore all GGUF and weight files to prevent 100MB+ push failures
+*.gguf
+*.bin
+models/
+
+# === Build Artifacts ===
+# Ignore compiler outputs and binaries
+build/
+bin/
+out/
+llama.cpp/build/
+llama.cpp/bin/
+llama.cpp/out/
+*.exe
+*.dll
+*.so
+*.o
+*.obj
+*.lib
+*.pdb
+*.exp
+*.ilk
+
+# === Debug & Log Files ===
+# Ignore the "Substation" telemetry and temporary traces
+*.log
+*.err
+*.out
+*.err.log
+*.out.log
+debug_load.log
+old_debug.log
+tensors.txt
+tensors_list.txt
+unique_tensors.txt
+gguf_kv.txt
+gguf_dump.txt
+gguf_dump.err
+branches.txt
+
+# === Python Environment ===
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# === IDE & OS Junk ===
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
