@@ -1,0 +1,803 @@
+EVERGREEN POWER - PROVINCIAL TRANSMISSION ASSET AUDIT 2026
+CLASSIFICATION: UNCLASSIFIED / LAB TEST DATA
+
+ENTRY [0000]: 2026-04-02 00:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0001]: 2026-04-21 01:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0002]: 2026-04-04 00:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0003]: 2026-04-05 00:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0004]: 2026-04-17 18:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0005]: 2026-04-16 22:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0006]: 2026-04-10 23:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0007]: 2026-04-26 07:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0008]: 2026-04-04 23:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0009]: 2026-04-30 16:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0010]: 2026-04-06 03:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0011]: 2026-04-13 22:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0012]: 2026-04-20 06:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0013]: 2026-04-26 01:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0014]: 2026-04-23 07:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0015]: 2026-04-18 18:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0016]: 2026-04-22 21:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0017]: 2026-04-25 07:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0018]: 2026-04-13 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0019]: 2026-04-16 20:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0020]: 2026-04-28 00:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0021]: 2026-04-20 04:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0022]: 2026-04-23 17:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0023]: 2026-04-09 04:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0024]: 2026-04-21 08:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0025]: 2026-04-14 16:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0026]: 2026-04-21 01:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0027]: 2026-04-03 17:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0028]: 2026-04-27 11:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0029]: 2026-04-27 22:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0030]: 2026-04-30 18:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0031]: 2026-04-03 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0032]: 2026-04-05 07:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0033]: 2026-04-01 08:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0034]: 2026-04-14 06:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0035]: 2026-04-22 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0036]: 2026-04-11 03:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0037]: 2026-04-04 14:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0038]: 2026-04-07 00:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0039]: 2026-04-11 20:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0040]: 2026-04-16 10:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0041]: 2026-04-30 14:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0042]: 2026-04-08 06:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0043]: 2026-04-28 16:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0044]: 2026-04-19 19:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0045]: 2026-04-11 12:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0046]: 2026-04-04 06:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0047]: 2026-04-29 02:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0048]: 2026-04-01 12:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0049]: 2026-04-29 10:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0050]: 2026-04-09 00:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0051]: 2026-04-03 11:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0052]: 2026-04-14 16:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0053]: 2026-04-03 21:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0054]: 2026-04-24 05:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0055]: 2026-04-15 14:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0056]: 2026-04-28 12:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0057]: 2026-04-24 09:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0058]: 2026-04-07 12:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0059]: 2026-04-10 23:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0060]: 2026-04-23 10:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0061]: 2026-04-03 01:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0062]: 2026-04-04 13:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0063]: 2026-04-20 11:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0064]: 2026-04-06 14:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0065]: 2026-04-19 22:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0066]: 2026-04-22 07:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0067]: 2026-04-08 19:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0068]: 2026-04-22 04:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0069]: 2026-04-27 10:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0070]: 2026-04-17 09:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0071]: 2026-04-28 17:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0072]: 2026-04-29 15:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0073]: 2026-04-21 22:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0074]: 2026-04-17 14:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0075]: 2026-04-23 12:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0076]: 2026-04-20 15:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0077]: 2026-04-09 14:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0078]: 2026-04-28 22:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0079]: 2026-04-10 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0080]: 2026-04-14 17:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0081]: 2026-04-27 18:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0082]: 2026-04-08 01:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0083]: 2026-04-11 08:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0084]: 2026-04-29 00:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0085]: 2026-04-08 07:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0086]: 2026-04-17 09:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0087]: 2026-04-29 02:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0088]: 2026-04-07 10:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0089]: 2026-04-04 18:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0090]: 2026-04-28 11:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0091]: 2026-04-22 00:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0092]: 2026-04-12 08:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0093]: 2026-04-07 21:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0094]: 2026-04-12 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0095]: 2026-04-26 21:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0096]: 2026-04-18 10:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0097]: 2026-04-19 17:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0098]: 2026-04-26 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0099]: 2026-04-06 02:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0100]: 2026-04-18 05:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0101]: 2026-04-19 20:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0102]: 2026-04-27 03:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0103]: 2026-04-17 10:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0104]: 2026-04-01 20:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0105]: 2026-04-21 12:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0106]: 2026-04-17 05:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0107]: 2026-04-22 13:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0108]: 2026-04-11 07:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0109]: 2026-04-14 09:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0110]: 2026-04-25 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0111]: 2026-04-05 04:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0112]: 2026-04-02 10:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0113]: 2026-04-26 23:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0114]: 2026-04-24 23:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0115]: 2026-04-23 21:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0116]: 2026-04-02 09:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0117]: 2026-04-07 08:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0118]: 2026-04-15 14:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0119]: 2026-04-23 02:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0120]: 2026-04-08 23:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0121]: 2026-04-28 09:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0122]: 2026-04-11 16:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0123]: 2026-04-22 02:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0124]: 2026-04-27 23:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0125]: 2026-04-28 16:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0126]: 2026-04-25 00:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0127]: 2026-04-14 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0128]: 2026-04-22 14:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0129]: 2026-04-12 17:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0130]: 2026-04-10 18:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0131]: 2026-04-28 09:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0132]: 2026-04-07 22:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0133]: 2026-04-30 04:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0134]: 2026-04-01 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0135]: 2026-04-11 13:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0136]: 2026-04-16 03:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0137]: 2026-04-15 13:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0138]: 2026-04-03 01:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0139]: 2026-04-15 12:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0140]: 2026-04-01 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0141]: 2026-04-05 23:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0142]: 2026-04-29 10:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0143]: 2026-04-27 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0144]: 2026-04-12 15:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0145]: 2026-04-05 18:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0146]: 2026-04-06 10:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0147]: 2026-04-21 00:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0148]: 2026-04-02 01:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0149]: 2026-04-25 10:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0150]: 2026-04-26 02:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0151]: 2026-04-20 05:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0152]: 2026-04-12 06:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0153]: 2026-04-18 17:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0154]: 2026-04-03 10:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0155]: 2026-04-17 20:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0156]: 2026-04-15 20:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0157]: 2026-04-20 13:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0158]: 2026-04-28 16:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0159]: 2026-04-10 22:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0160]: 2026-04-11 17:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0161]: 2026-04-02 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0162]: 2026-04-05 09:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0163]: 2026-04-20 06:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0164]: 2026-04-05 04:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0165]: 2026-04-25 16:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0166]: 2026-04-28 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0167]: 2026-04-30 15:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0168]: 2026-04-17 17:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0169]: 2026-04-11 17:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0170]: 2026-04-01 00:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0171]: 2026-04-08 15:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0172]: 2026-04-24 06:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0173]: 2026-04-19 16:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0174]: 2026-04-14 17:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0175]: 2026-04-28 06:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0176]: 2026-04-14 19:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0177]: 2026-04-06 15:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0178]: 2026-04-10 03:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0179]: 2026-04-04 18:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0180]: 2026-04-06 17:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0181]: 2026-04-07 08:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0182]: 2026-04-07 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0183]: 2026-04-01 17:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0184]: 2026-04-22 07:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0185]: 2026-04-13 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0186]: 2026-04-07 19:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0187]: 2026-04-20 18:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0188]: 2026-04-09 05:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0189]: 2026-04-02 20:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0190]: 2026-04-30 10:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0191]: 2026-04-09 20:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0192]: 2026-04-12 11:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0193]: 2026-04-21 13:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0194]: 2026-04-26 03:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0195]: 2026-04-20 14:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0196]: 2026-04-11 18:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0197]: 2026-04-01 23:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0198]: 2026-04-15 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0199]: 2026-04-08 03:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0200]: 2026-04-03 04:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0201]: 2026-04-21 16:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0202]: 2026-04-17 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0203]: 2026-04-09 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0204]: 2026-04-01 03:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0205]: 2026-04-25 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0206]: 2026-04-16 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0207]: 2026-04-08 04:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0208]: 2026-04-16 07:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0209]: 2026-04-02 14:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0210]: 2026-04-07 07:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0211]: 2026-04-06 03:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0212]: 2026-04-10 05:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0213]: 2026-04-16 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0214]: 2026-04-23 12:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0215]: 2026-04-13 12:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0216]: 2026-04-12 22:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0217]: 2026-04-24 06:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0218]: 2026-04-05 13:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0219]: 2026-04-03 07:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0220]: 2026-04-21 16:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0221]: 2026-04-17 01:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0222]: 2026-04-16 02:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0223]: 2026-04-25 08:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0224]: 2026-04-18 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0225]: 2026-04-21 02:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0226]: 2026-04-09 21:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0227]: 2026-04-11 00:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0228]: 2026-04-18 15:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0229]: 2026-04-29 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0230]: 2026-04-15 07:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0231]: 2026-04-29 06:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0232]: 2026-04-30 12:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0233]: 2026-04-08 14:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0234]: 2026-04-12 19:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0235]: 2026-04-08 08:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0236]: 2026-04-17 23:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0237]: 2026-04-27 17:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0238]: 2026-04-28 03:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0239]: 2026-04-20 10:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0240]: 2026-04-28 06:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0241]: 2026-04-03 17:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0242]: 2026-04-10 06:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0243]: 2026-04-23 13:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0244]: 2026-04-23 09:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0245]: 2026-04-29 10:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0246]: 2026-04-01 20:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0247]: 2026-04-26 01:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0248]: 2026-04-25 19:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0249]: 2026-04-18 07:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0250]: 2026-04-18 15:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0251]: 2026-04-30 00:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0252]: 2026-04-19 02:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0253]: 2026-04-01 13:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0254]: 2026-04-01 03:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0255]: 2026-04-08 01:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0256]: 2026-04-19 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0257]: 2026-04-08 20:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0258]: 2026-04-24 17:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0259]: 2026-04-05 00:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0260]: 2026-04-22 07:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0261]: 2026-04-12 04:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0262]: 2026-04-30 06:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0263]: 2026-04-04 18:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0264]: 2026-04-10 01:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0265]: 2026-04-02 18:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0266]: 2026-04-23 07:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0267]: 2026-04-10 21:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0268]: 2026-04-28 05:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0269]: 2026-04-06 05:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0270]: 2026-04-13 14:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0271]: 2026-04-24 11:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0272]: 2026-04-14 05:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0273]: 2026-04-20 08:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0274]: 2026-04-10 00:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0275]: 2026-04-14 01:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0276]: 2026-04-08 19:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0277]: 2026-04-30 03:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0278]: 2026-04-23 13:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0279]: 2026-04-06 14:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0280]: 2026-04-22 14:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0281]: 2026-04-23 18:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0282]: 2026-04-07 02:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0283]: 2026-04-03 00:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0284]: 2026-04-19 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0285]: 2026-04-17 13:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0286]: 2026-04-29 05:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0287]: 2026-04-20 00:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0288]: 2026-04-08 08:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0289]: 2026-04-23 02:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0290]: 2026-04-05 20:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0291]: 2026-04-04 07:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0292]: 2026-04-04 04:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0293]: 2026-04-16 19:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0294]: 2026-04-02 16:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0295]: 2026-04-15 09:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0296]: 2026-04-18 21:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0297]: 2026-04-21 20:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0298]: 2026-04-30 05:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0299]: 2026-04-02 00:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0300]: 2026-04-20 12:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0301]: 2026-04-21 17:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0302]: 2026-04-06 19:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0303]: 2026-04-21 02:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0304]: 2026-04-26 00:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0305]: 2026-04-25 08:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0306]: 2026-04-28 05:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0307]: 2026-04-02 12:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0308]: 2026-04-10 04:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0309]: 2026-04-17 12:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0310]: 2026-04-26 10:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0311]: 2026-04-21 20:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0312]: 2026-04-06 07:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0313]: 2026-04-24 04:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0314]: 2026-04-13 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0315]: 2026-04-06 13:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0316]: 2026-04-15 00:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0317]: 2026-04-05 12:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0318]: 2026-04-07 10:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0319]: 2026-04-25 03:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0320]: 2026-04-10 14:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0321]: 2026-04-27 15:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0322]: 2026-04-29 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0323]: 2026-04-26 18:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0324]: 2026-04-01 00:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0325]: 2026-04-14 16:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0326]: 2026-04-27 16:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0327]: 2026-04-20 18:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0328]: 2026-04-05 05:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0329]: 2026-04-01 00:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0330]: 2026-04-05 21:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0331]: 2026-04-25 13:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0332]: 2026-04-01 17:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0333]: 2026-04-27 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0334]: 2026-04-24 17:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0335]: 2026-04-13 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0336]: 2026-04-14 09:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0337]: 2026-04-05 19:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0338]: 2026-04-12 04:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0339]: 2026-04-10 14:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0340]: 2026-04-15 20:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0341]: 2026-04-17 09:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0342]: 2026-04-23 10:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0343]: 2026-04-05 17:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0344]: 2026-04-28 06:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0345]: 2026-04-02 00:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0346]: 2026-04-26 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0347]: 2026-04-24 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0348]: 2026-04-21 12:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0349]: 2026-04-23 04:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0350]: 2026-04-18 14:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0351]: 2026-04-15 08:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0352]: 2026-04-11 02:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0353]: 2026-04-02 13:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0354]: 2026-04-29 14:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0355]: 2026-04-09 20:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0356]: 2026-04-18 16:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0357]: 2026-04-13 04:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0358]: 2026-04-24 05:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0359]: 2026-04-14 15:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0360]: 2026-04-22 22:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0361]: 2026-04-22 07:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0362]: 2026-04-02 09:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0363]: 2026-04-14 02:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0364]: 2026-04-12 14:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0365]: 2026-04-08 03:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0366]: 2026-04-10 14:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0367]: 2026-04-22 16:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0368]: 2026-04-29 11:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0369]: 2026-04-11 16:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0370]: 2026-04-18 21:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0371]: 2026-04-05 10:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0372]: 2026-04-04 16:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0373]: 2026-04-10 23:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0374]: 2026-04-16 10:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0375]: 2026-04-05 18:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0376]: 2026-04-28 01:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0377]: 2026-04-29 19:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0378]: 2026-04-20 20:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0379]: 2026-04-11 22:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0380]: 2026-04-09 05:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0381]: 2026-04-02 22:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0382]: 2026-04-02 18:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0383]: 2026-04-22 03:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0384]: 2026-04-20 21:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0385]: 2026-04-26 08:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0386]: 2026-04-29 03:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0387]: 2026-04-09 00:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0388]: 2026-04-27 01:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0389]: 2026-04-14 01:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0390]: 2026-04-02 23:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0391]: 2026-04-08 09:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0392]: 2026-04-29 09:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0393]: 2026-04-27 03:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0394]: 2026-04-11 01:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0395]: 2026-04-04 06:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0396]: 2026-04-18 15:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0397]: 2026-04-19 21:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0398]: 2026-04-10 15:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0399]: 2026-04-09 09:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0400]: 2026-04-08 23:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0401]: 2026-04-14 10:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0402]: 2026-04-17 04:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0403]: 2026-04-03 02:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0404]: 2026-04-05 15:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0405]: 2026-04-10 08:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0406]: 2026-04-27 00:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0407]: 2026-04-16 12:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0408]: 2026-04-11 06:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0409]: 2026-04-13 05:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0410]: 2026-04-24 20:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0411]: 2026-04-30 02:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0412]: 2026-04-08 17:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0413]: 2026-04-01 15:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0414]: 2026-04-01 11:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0415]: 2026-04-13 02:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0416]: 2026-04-17 21:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0417]: 2026-04-20 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0418]: 2026-04-27 05:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0419]: 2026-04-19 13:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0420]: 2026-04-14 02:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0421]: 2026-04-19 06:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0422]: 2026-04-01 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0423]: 2026-04-02 14:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0424]: 2026-04-23 01:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0425]: 2026-04-29 18:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0426]: 2026-04-22 08:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0427]: 2026-04-25 13:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0428]: 2026-04-17 18:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0429]: 2026-04-09 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0430]: 2026-04-30 00:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0431]: 2026-04-25 00:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0432]: 2026-04-10 12:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0433]: 2026-04-15 22:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0434]: 2026-04-03 05:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0435]: 2026-04-26 05:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0436]: 2026-04-25 05:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0437]: 2026-04-15 21:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0438]: 2026-04-15 04:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0439]: 2026-04-18 13:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0440]: 2026-04-28 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0441]: 2026-04-26 10:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0442]: 2026-04-14 05:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0443]: 2026-04-08 07:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0444]: 2026-04-03 11:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0445]: 2026-04-13 15:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0446]: 2026-04-04 18:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0447]: 2026-04-11 08:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0448]: 2026-04-08 08:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0449]: 2026-04-25 12:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0450]: 2026-04-13 01:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0451]: 2026-04-05 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0452]: 2026-04-15 18:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0453]: 2026-04-09 22:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0454]: 2026-04-21 01:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0455]: 2026-04-07 05:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0456]: 2026-04-06 22:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0457]: 2026-04-04 22:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0458]: 2026-04-24 17:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0459]: 2026-04-23 20:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0460]: 2026-04-01 16:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0461]: 2026-04-04 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0462]: 2026-04-03 13:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0463]: 2026-04-05 13:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0464]: 2026-04-18 03:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0465]: 2026-04-22 20:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0466]: 2026-04-15 12:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0467]: 2026-04-07 20:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0468]: 2026-04-19 09:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0469]: 2026-04-06 07:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0470]: 2026-04-19 04:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0471]: 2026-04-16 08:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0472]: 2026-04-19 18:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0473]: 2026-04-06 21:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0474]: 2026-04-14 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0475]: 2026-04-06 02:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0476]: 2026-04-11 11:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0477]: 2026-04-27 20:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0478]: 2026-04-17 23:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0479]: 2026-04-11 13:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0480]: 2026-04-18 13:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0481]: 2026-04-22 20:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0482]: 2026-04-09 16:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0483]: 2026-04-05 04:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0484]: 2026-04-11 15:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0485]: 2026-04-05 17:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0486]: 2026-04-11 07:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0487]: 2026-04-13 20:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0488]: 2026-04-27 22:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0489]: 2026-04-01 22:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0490]: 2026-04-30 23:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0491]: 2026-04-20 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0492]: 2026-04-21 07:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0493]: 2026-04-24 23:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0494]: 2026-04-05 19:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0495]: 2026-04-21 09:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0496]: 2026-04-12 13:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0497]: 2026-04-15 21:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0498]: 2026-04-12 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0499]: 2026-04-21 00:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0500]: 2026-04-10 12:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0501]: 2026-04-08 12:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0502]: 2026-04-06 17:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0503]: 2026-04-20 00:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0504]: 2026-04-24 02:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0505]: 2026-04-30 03:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0506]: 2026-04-18 07:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0507]: 2026-04-25 03:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0508]: 2026-04-04 09:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0509]: 2026-04-21 04:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0510]: 2026-04-26 09:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0511]: 2026-04-04 07:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0512]: 2026-04-24 12:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0513]: 2026-04-13 17:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0514]: 2026-04-19 03:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0515]: 2026-04-01 16:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0516]: 2026-04-12 04:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0517]: 2026-04-30 18:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0518]: 2026-04-03 07:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0519]: 2026-04-20 03:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0520]: 2026-04-23 13:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0521]: 2026-04-14 13:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0522]: 2026-04-06 13:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0523]: 2026-04-28 22:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0524]: 2026-04-10 14:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0525]: 2026-04-25 17:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0526]: 2026-04-27 16:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0527]: 2026-04-26 19:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0528]: 2026-04-26 10:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0529]: 2026-04-21 06:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0530]: 2026-04-10 03:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0531]: 2026-04-15 11:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0532]: 2026-04-11 15:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0533]: 2026-04-04 21:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0534]: 2026-04-12 00:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0535]: 2026-04-08 08:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0536]: 2026-04-29 02:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0537]: 2026-04-14 19:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0538]: 2026-04-22 14:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0539]: 2026-04-05 18:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0540]: 2026-04-03 20:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0541]: 2026-04-24 00:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0542]: 2026-04-15 18:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0543]: 2026-04-13 04:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0544]: 2026-04-01 19:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0545]: 2026-04-18 17:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0546]: 2026-04-04 19:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0547]: 2026-04-02 16:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0548]: 2026-04-10 09:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0549]: 2026-04-26 01:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0550]: 2026-04-20 08:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0551]: 2026-04-17 02:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0552]: 2026-04-14 16:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0553]: 2026-04-09 14:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0554]: 2026-04-13 10:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0555]: 2026-04-22 04:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0556]: 2026-04-15 00:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0557]: 2026-04-04 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0558]: 2026-04-09 11:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0559]: 2026-04-08 10:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0560]: 2026-04-29 22:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0561]: 2026-04-10 05:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0562]: 2026-04-06 20:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0563]: 2026-04-23 03:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0564]: 2026-04-07 13:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0565]: 2026-04-23 09:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0566]: 2026-04-12 09:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0567]: 2026-04-18 15:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0568]: 2026-04-21 00:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0569]: 2026-04-06 21:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0570]: 2026-04-10 04:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0571]: 2026-04-23 11:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0572]: 2026-04-04 01:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0573]: 2026-04-22 06:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0574]: 2026-04-26 20:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0575]: 2026-04-19 22:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0576]: 2026-04-24 16:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0577]: 2026-04-13 02:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0578]: 2026-04-06 02:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0579]: 2026-04-30 06:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0580]: 2026-04-05 05:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0581]: 2026-04-13 17:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0582]: 2026-04-16 07:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0583]: 2026-04-10 13:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0584]: 2026-04-17 02:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0585]: 2026-04-19 01:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0586]: 2026-04-09 05:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0587]: 2026-04-13 13:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0588]: 2026-04-09 17:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0589]: 2026-04-07 17:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0590]: 2026-04-21 07:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0591]: 2026-04-07 03:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0592]: 2026-04-27 17:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0593]: 2026-04-15 01:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0594]: 2026-04-20 10:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0595]: 2026-04-22 13:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0596]: 2026-04-23 15:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0597]: 2026-04-12 22:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0598]: 2026-04-28 00:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0599]: 2026-04-18 04:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0600]: 2026-04-19 14:20:00 - ASSET: Winemaking-Vault-1 - STATUS: Racking Complete - NOTE: The optimal potassium metabisulfite ratio for this batch was 1.4 grams per 20L. Also, Giulia was seen near the knot buns again.
+ENTRY [0601]: 2026-04-07 00:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0602]: 2026-04-24 05:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0603]: 2026-04-20 15:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0604]: 2026-04-06 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0605]: 2026-04-26 15:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0606]: 2026-04-24 03:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0607]: 2026-04-27 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0608]: 2026-04-10 03:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0609]: 2026-04-04 23:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0610]: 2026-04-01 05:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0611]: 2026-04-02 03:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0612]: 2026-04-11 15:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0613]: 2026-04-21 16:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0614]: 2026-04-07 12:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0615]: 2026-04-27 03:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0616]: 2026-04-12 11:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0617]: 2026-04-09 06:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0618]: 2026-04-27 00:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0619]: 2026-04-18 03:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0620]: 2026-04-23 08:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0621]: 2026-04-21 12:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0622]: 2026-04-14 01:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0623]: 2026-04-09 20:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0624]: 2026-04-05 23:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0625]: 2026-04-20 12:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0626]: 2026-04-20 11:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0627]: 2026-04-09 14:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0628]: 2026-04-03 10:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0629]: 2026-04-06 00:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0630]: 2026-04-10 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0631]: 2026-04-05 12:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0632]: 2026-04-03 07:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0633]: 2026-04-16 09:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0634]: 2026-04-19 08:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0635]: 2026-04-28 04:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0636]: 2026-04-09 08:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0637]: 2026-04-18 11:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0638]: 2026-04-19 07:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0639]: 2026-04-12 04:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0640]: 2026-04-05 08:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0641]: 2026-04-07 16:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0642]: 2026-04-24 15:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0643]: 2026-04-08 01:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0644]: 2026-04-12 02:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0645]: 2026-04-19 07:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0646]: 2026-04-26 13:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0647]: 2026-04-14 09:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0648]: 2026-04-14 19:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0649]: 2026-04-07 21:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0650]: 2026-04-01 03:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0651]: 2026-04-07 17:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0652]: 2026-04-27 10:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0653]: 2026-04-29 03:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0654]: 2026-04-10 11:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0655]: 2026-04-09 16:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0656]: 2026-04-30 04:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0657]: 2026-04-06 13:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0658]: 2026-04-09 01:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0659]: 2026-04-03 14:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0660]: 2026-04-05 01:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0661]: 2026-04-10 14:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0662]: 2026-04-28 07:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0663]: 2026-04-20 07:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0664]: 2026-04-23 06:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0665]: 2026-04-27 10:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0666]: 2026-04-12 16:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0667]: 2026-04-26 06:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0668]: 2026-04-29 21:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0669]: 2026-04-08 07:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0670]: 2026-04-12 02:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0671]: 2026-04-11 11:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0672]: 2026-04-24 08:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0673]: 2026-04-07 17:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0674]: 2026-04-06 17:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0675]: 2026-04-15 10:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0676]: 2026-04-28 00:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0677]: 2026-04-06 01:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0678]: 2026-04-21 19:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0679]: 2026-04-07 08:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0680]: 2026-04-14 13:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0681]: 2026-04-16 13:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0682]: 2026-04-03 09:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0683]: 2026-04-10 04:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0684]: 2026-04-14 10:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0685]: 2026-04-27 02:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0686]: 2026-04-16 18:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0687]: 2026-04-07 04:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0688]: 2026-04-08 11:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0689]: 2026-04-08 04:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0690]: 2026-04-29 02:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0691]: 2026-04-11 03:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0692]: 2026-04-26 00:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0693]: 2026-04-09 06:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0694]: 2026-04-06 14:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0695]: 2026-04-21 21:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0696]: 2026-04-28 21:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0697]: 2026-04-19 19:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0698]: 2026-04-12 18:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0699]: 2026-04-10 06:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0700]: 2026-04-14 22:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0701]: 2026-04-20 19:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0702]: 2026-04-03 15:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0703]: 2026-04-11 06:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0704]: 2026-04-09 20:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0705]: 2026-04-26 23:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0706]: 2026-04-24 16:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0707]: 2026-04-19 16:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: A. Rossi
+ENTRY [0708]: 2026-04-25 13:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0709]: 2026-04-23 21:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0710]: 2026-04-13 07:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0711]: 2026-04-10 05:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0712]: 2026-04-26 03:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0713]: 2026-04-29 14:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0714]: 2026-04-19 09:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0715]: 2026-04-10 19:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0716]: 2026-04-26 16:15:00 - ASSET: Relay-R9 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0717]: 2026-04-13 15:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0718]: 2026-04-04 19:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0719]: 2026-04-29 23:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0720]: 2026-04-20 10:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0721]: 2026-04-05 01:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0722]: 2026-04-17 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0723]: 2026-04-14 10:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0724]: 2026-04-17 18:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0725]: 2026-04-03 17:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0726]: 2026-04-04 03:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0727]: 2026-04-06 10:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0728]: 2026-04-16 04:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0729]: 2026-04-03 17:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0730]: 2026-04-17 13:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0731]: 2026-04-24 20:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0732]: 2026-04-08 14:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0733]: 2026-04-11 11:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0734]: 2026-04-18 10:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: T. Miller
+ENTRY [0735]: 2026-04-09 04:15:00 - ASSET: Switch-S11 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0736]: 2026-04-06 06:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0737]: 2026-04-14 15:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0738]: 2026-04-01 01:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0739]: 2026-04-22 01:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0740]: 2026-04-11 10:15:00 - ASSET: Transformer-T1 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0741]: 2026-04-13 13:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0742]: 2026-04-23 00:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0743]: 2026-04-11 06:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0744]: 2026-04-11 20:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0745]: 2026-04-14 22:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0746]: 2026-04-13 07:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0747]: 2026-04-11 00:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0748]: 2026-04-04 03:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0749]: 2026-04-27 01:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0750]: 2026-04-19 15:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0751]: 2026-04-28 06:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0752]: 2026-04-12 01:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0753]: 2026-04-12 13:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: D. Mastrangelo
+ENTRY [0754]: 2026-04-05 09:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0755]: 2026-04-09 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0756]: 2026-04-03 02:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0757]: 2026-04-16 16:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0758]: 2026-04-25 02:15:00 - ASSET: Switch-S11 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0759]: 2026-04-20 23:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: A. Rossi
+ENTRY [0760]: 2026-04-21 04:15:00 - ASSET: Switch-S11 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0761]: 2026-04-18 19:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0762]: 2026-04-02 22:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0763]: 2026-04-04 11:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: T. Miller
+ENTRY [0764]: 2026-04-09 01:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0765]: 2026-04-05 09:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: T. Miller
+ENTRY [0766]: 2026-04-24 00:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0767]: 2026-04-03 09:15:00 - ASSET: Transformer-T1 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0768]: 2026-04-20 00:15:00 - ASSET: Breaker-B42 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0769]: 2026-04-11 09:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0770]: 2026-04-12 04:15:00 - ASSET: Cap-Bank-C2 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0771]: 2026-04-09 00:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0772]: 2026-04-13 05:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0773]: 2026-04-25 23:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: S. Gupta
+ENTRY [0774]: 2026-04-14 13:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0775]: 2026-04-05 23:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: D. Mastrangelo
+ENTRY [0776]: 2026-04-23 15:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0777]: 2026-04-24 21:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0778]: 2026-04-26 14:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0779]: 2026-04-27 14:15:00 - ASSET: Breaker-B42 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0780]: 2026-04-14 03:15:00 - ASSET: Cap-Bank-C2 - STATUS: SF6 pressure low - TECH: S. Gupta
+ENTRY [0781]: 2026-04-26 05:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0782]: 2026-04-07 04:15:00 - ASSET: Transformer-T1 - STATUS: Thermal hotspot @ 75°C - TECH: A. Rossi
+ENTRY [0783]: 2026-04-30 12:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: T. Miller
+ENTRY [0784]: 2026-04-16 15:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0785]: 2026-04-28 00:15:00 - ASSET: Relay-R9 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0786]: 2026-04-26 08:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0787]: 2026-04-17 18:15:00 - ASSET: Cap-Bank-C2 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0788]: 2026-04-19 00:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: D. Mastrangelo
+ENTRY [0789]: 2026-04-05 08:15:00 - ASSET: Switch-S11 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0790]: 2026-04-16 18:15:00 - ASSET: Breaker-B42 - STATUS: Normal Operation - TECH: T. Miller
+ENTRY [0791]: 2026-04-28 00:15:00 - ASSET: Transformer-T1 - STATUS: Bushing discoloration - TECH: S. Gupta
+ENTRY [0792]: 2026-04-29 14:15:00 - ASSET: Cap-Bank-C2 - STATUS: Oil leak detected - TECH: D. Mastrangelo
+ENTRY [0793]: 2026-04-19 20:15:00 - ASSET: Relay-R9 - STATUS: Thermal hotspot @ 75°C - TECH: D. Mastrangelo
+ENTRY [0794]: 2026-04-15 08:15:00 - ASSET: Relay-R9 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0795]: 2026-04-05 00:15:00 - ASSET: Switch-S11 - STATUS: Oil leak detected - TECH: S. Gupta
+ENTRY [0796]: 2026-04-30 12:15:00 - ASSET: Breaker-B42 - STATUS: Bushing discoloration - TECH: A. Rossi
+ENTRY [0797]: 2026-04-03 09:15:00 - ASSET: Breaker-B42 - STATUS: SF6 pressure low - TECH: A. Rossi
+ENTRY [0798]: 2026-04-17 15:15:00 - ASSET: Relay-R9 - STATUS: Normal Operation - TECH: S. Gupta
+ENTRY [0799]: 2026-04-25 01:15:00 - ASSET: Transformer-T1 - STATUS: Oil leak detected - TECH: S. Gupta
